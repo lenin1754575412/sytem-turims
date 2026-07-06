@@ -1,115 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
 import styles from "./turismo.module.css";
-
-const lugares = [
-  {
-    nombre: "Plaza de Armas",
-    zona: "Centro de Celendín",
-    tipo: "Arquitectura y ciudad",
-    distancia: "Centro de la ciudad",
-    imagen: "/images/turismo/plaza-armas.jpg",
-    descripcion:
-      "El corazón de Celendín, rodeado de jardines, árboles, construcciones tradicionales y la iglesia principal. Es uno de los puntos de encuentro más importantes.",
-  },
-  {
-    nombre: "Iglesia Virgen del Carmen",
-    zona: "Plaza Mayor",
-    tipo: "Patrimonio religioso",
-    distancia: "Centro de la ciudad",
-    imagen: "/images/turismo/iglesia-principal.jpg",
-    descripcion:
-      "Uno de los edificios más representativos de Celendín. Destaca por su arquitectura, su color característico y su importancia religiosa y cultural.",
-  },
-  {
-    nombre: "Mirador San Isidro",
-    zona: "Celendín",
-    tipo: "Mirador natural",
-    distancia: "Aproximadamente 1 km",
-    imagen: "/images/turismo/mirador-san-isidro.jpg",
-    descripcion:
-      "Mirador ubicado en una colina al oeste de la ciudad. Desde este lugar se puede observar Celendín, sus calles y los paisajes que la rodean.",
-  },
-  {
-    nombre: "Cerro Jelij",
-    zona: "Celendín",
-    tipo: "Montaña y paisaje",
-    distancia: "Aproximadamente 10 km",
-    imagen: "/images/turismo/cerro-jelij.jpg",
-    descripcion:
-      "Elevación natural desde donde se aprecia la ciudad de Celendín, los valles cercanos y parte del paisaje formado alrededor del río Marañón.",
-  },
-  {
-    nombre: "Cascada La Novia",
-    zona: "Distrito de Sucre",
-    tipo: "Cascada natural",
-    distancia: "Aproximadamente 5 km",
-    imagen: "/images/turismo/cascada-la-novia.jpg",
-    descripcion:
-      "Cascada cuya caída de agua forma una figura semejante al vestido de una novia. Durante la temporada de lluvias aumenta su caudal y belleza.",
-  },
-  {
-    nombre: "Caídas de Agua Langascocha",
-    zona: "Provincia de Celendín",
-    tipo: "Naturaleza y aventura",
-    distancia: "Aproximadamente 8 km",
-    imagen: "/images/turismo/langascocha.jpg",
-    descripcion:
-      "Caídas de agua del río Tingo que forman una pequeña poza natural de agua transparente y fría, ideal para disfrutar del paisaje y realizar caminatas.",
-  },
-  {
-    nombre: "Municipalidad Provincial",
-    zona: "Plaza Mayor",
-    tipo: "Arquitectura urbana",
-    distancia: "Centro de la ciudad",
-    imagen: "/images/turismo/municipalidad.jpg",
-    descripcion:
-      "Edificio ubicado junto a la Plaza Mayor. Forma parte de la imagen urbana tradicional y del recorrido por el centro histórico de Celendín.",
-  },
-  {
-    nombre: "Centro Histórico",
-    zona: "Ciudad de Celendín",
-    tipo: "Historia y cultura",
-    distancia: "Recorrido a pie",
-    imagen: "/images/turismo/centro-historico.jpg",
-    descripcion:
-      "Calles rectas, viviendas tradicionales, balcones y construcciones que permiten conocer la historia y el desarrollo urbano de Celendín.",
-  },
-  {
-    nombre: "Biblioteca Municipal",
-    zona: "Centro de Celendín",
-    tipo: "Cultura y educación",
-    distancia: "Centro de la ciudad",
-    imagen: "/images/turismo/biblioteca.jpg",
-    descripcion:
-      "Espacio cultural dedicado a la lectura, la educación y la conservación de parte de la memoria documental de la provincia.",
-  },
-  {
-    nombre: "Arquitectura Tradicional",
-    zona: "Barrios de Celendín",
-    tipo: "Identidad local",
-    distancia: "Recorrido urbano",
-    imagen: "/images/turismo/arquitectura-tradicional.jpg",
-    descripcion:
-      "Viviendas y construcciones que conservan detalles propios de la arquitectura tradicional de la sierra cajamarquina.",
-  },
-  {
-    nombre: "Paisajes de Celendín",
-    zona: "Alrededores de la ciudad",
-    tipo: "Naturaleza",
-    distancia: "Distintos recorridos",
-    imagen: "/images/turismo/panorama-celendin.jpg",
-    descripcion:
-      "Montañas, campos, caminos rurales y valles forman parte de los escenarios naturales que rodean la ciudad de Celendín.",
-  },
-  {
-    nombre: "Artesanía Celendina",
-    zona: "Mercados y talleres",
-    tipo: "Cultura artesanal",
-    distancia: "Dentro de la ciudad",
-    imagen: "/images/turismo/portada-turismo.jpg",
-    descripcion:
-      "Celendín es conocido por sus artesanos y por la elaboración de sombreros de paja toquilla, tejidos y otros productos tradicionales.",
-  },
-];
 
 const experiencias = [
   {
@@ -138,6 +29,117 @@ const experiencias = [
   },
 ];
 
+const lugares = [
+  {
+    nombre: "Plaza de Armas",
+    zona: "Centro de Celendín",
+    tipo: "Arquitectura",
+    distancia: "Centro de la ciudad",
+    imagen: "/images/turismo/plaza-armas.jpg",
+    descripcion:
+      "El corazón de Celendín, rodeado de jardines, árboles, construcciones tradicionales y espacios de encuentro.",
+  },
+  {
+    nombre: "Iglesia Virgen del Carmen",
+    zona: "Plaza Mayor",
+    tipo: "Patrimonio",
+    distancia: "Centro de la ciudad",
+    imagen: "/images/turismo/iglesia-principal.jpg",
+    descripcion:
+      "Uno de los edificios más representativos de Celendín por su arquitectura, historia e importancia religiosa.",
+  },
+  {
+    nombre: "Mirador San Isidro",
+    zona: "Celendín",
+    tipo: "Mirador",
+    distancia: "Aproximadamente 1 km",
+    imagen: "/images/turismo/mirador-san-isidro.jpg",
+    descripcion:
+      "Un espacio elevado desde donde se puede contemplar la ciudad, sus calles y las montañas que la rodean.",
+  },
+  {
+    nombre: "Cerro Jelij",
+    zona: "Alrededores de Celendín",
+    tipo: "Naturaleza",
+    distancia: "Aproximadamente 10 km",
+    imagen: "/images/turismo/cerro-jelij.jpg",
+    descripcion:
+      "Elevación natural con impresionantes vistas de Celendín, sus valles y los paisajes cercanos al río Marañón.",
+  },
+  {
+    nombre: "Cascada La Novia",
+    zona: "Distrito de Sucre",
+    tipo: "Cascada",
+    distancia: "Aproximadamente 5 km",
+    imagen: "/images/turismo/cascada-la-novia.jpg",
+    descripcion:
+      "Una caída de agua cuyo movimiento recuerda la forma del vestido de una novia, especialmente en época de lluvias.",
+  },
+  {
+    nombre: "Caídas de Agua Langascocha",
+    zona: "Provincia de Celendín",
+    tipo: "Aventura",
+    distancia: "Aproximadamente 8 km",
+    imagen: "/images/turismo/langascocha.jpg",
+    descripcion:
+      "Caídas de agua y pequeñas pozas naturales rodeadas de vegetación, ideales para caminatas y fotografía.",
+  },
+  {
+    nombre: "Municipalidad Provincial",
+    zona: "Plaza Mayor",
+    tipo: "Ciudad",
+    distancia: "Centro de la ciudad",
+    imagen: "/images/turismo/municipalidad.jpg",
+    descripcion:
+      "Edificio tradicional que forma parte de la imagen urbana y del recorrido por el centro histórico de Celendín.",
+  },
+  {
+    nombre: "Centro Histórico",
+    zona: "Ciudad de Celendín",
+    tipo: "Historia",
+    distancia: "Recorrido a pie",
+    imagen: "/images/turismo/centro-historico.jpg",
+    descripcion:
+      "Calles, viviendas tradicionales y balcones que permiten conocer la historia y el desarrollo urbano de la provincia.",
+  },
+  {
+    nombre: "Biblioteca Municipal",
+    zona: "Centro de Celendín",
+    tipo: "Cultura",
+    distancia: "Centro de la ciudad",
+    imagen: "/images/turismo/biblioteca.jpg",
+    descripcion:
+      "Espacio dedicado a la lectura, la educación y la conservación de parte de la memoria cultural de Celendín.",
+  },
+  {
+    nombre: "Arquitectura Tradicional",
+    zona: "Barrios de Celendín",
+    tipo: "Identidad",
+    distancia: "Recorrido urbano",
+    imagen: "/images/turismo/arquitectura-tradicional.jpg",
+    descripcion:
+      "Viviendas y construcciones que conservan detalles característicos de la arquitectura tradicional cajamarquina.",
+  },
+  {
+    nombre: "Paisajes de Celendín",
+    zona: "Alrededores de la ciudad",
+    tipo: "Paisajes",
+    distancia: "Distintos recorridos",
+    imagen: "/images/turismo/panorama-celendin.jpg",
+    descripcion:
+      "Montañas, campos, caminos rurales y valles forman los escenarios naturales que rodean la ciudad.",
+  },
+  {
+    nombre: "Artesanía Celendina",
+    zona: "Mercados y talleres",
+    tipo: "Tradición",
+    distancia: "Dentro de la ciudad",
+    imagen: "/images/turismo/portada-turismo.jpg",
+    descripcion:
+      "Celendín destaca por sus sombreros de paja, tejidos y productos elaborados por los artesanos de la provincia.",
+  },
+];
+
 export const metadata = {
   title: "Turismo en Celendín",
   description:
@@ -146,24 +148,26 @@ export const metadata = {
 
 export default function TurismoPage() {
   return (
-    <main className={styles.pagina}>
+    <main className={styles.page}>
       <section className={styles.hero}>
-        <img
+        <Image
           src="/images/turismo/portada-turismo.jpg"
-          alt="Vista panorámica de Celendín"
-          className={styles.heroImagen}
+          alt="Vista turística de Celendín"
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroImage}
         />
 
-        <div className={styles.heroCapa} />
+        <div className={styles.heroOverlay} />
+        <div className={styles.heroLight} />
 
-        <div className={styles.heroContenido}>
-          <span className={styles.etiqueta}>
-            Cielo Azul del Edén
-          </span>
+        <div className={styles.heroContent}>
+          <span className={styles.heroTag}>Cielo azul del Edén</span>
 
           <h1>
             Descubre
-            <strong> Celendín</strong>
+            <span>Celendín</span>
           </h1>
 
           <p>
@@ -171,96 +175,237 @@ export default function TurismoPage() {
             tradiciones y paisajes llenos de historia.
           </p>
 
-          <a href="#lugares" className={styles.boton}>
-            Ver lugares turísticos
-          </a>
+          <div className={styles.heroButtons}>
+            <a href="#lugares" className={styles.primaryButton}>
+              Ver lugares turísticos
+            </a>
+
+            <Link href="/galeria" className={styles.secondaryButton}>
+              Explorar galería
+            </Link>
+          </div>
         </div>
+
+        <a href="#presentacion" className={styles.scrollIndicator}>
+          <span />
+          Desliza para descubrir
+        </a>
       </section>
 
-      <section className={styles.introduccion}>
-        <span>Turismo, cultura y naturaleza</span>
+      <section id="presentacion" className={styles.presentation}>
+        <div className={styles.container}>
+          <div className={styles.presentationGrid}>
+            <div className={styles.presentationText}>
+              <span className={styles.eyebrow}>
+                Turismo, cultura y naturaleza
+              </span>
 
-        <h2>Una provincia llena de lugares por descubrir</h2>
+              <h2>Una provincia llena de lugares por descubrir</h2>
 
-        <p>
-          Celendín ofrece recorridos por su centro histórico, paisajes
-          naturales, cascadas, miradores y comunidades que mantienen vivas
-          sus costumbres.
-        </p>
+              <p>
+                Celendín ofrece recorridos por su centro histórico, paisajes
+                naturales, cascadas, miradores y comunidades que mantienen
+                vivas sus costumbres.
+              </p>
 
-        <div className={styles.experiencias}>
-          {experiencias.map((experiencia) => (
-            <article
-              className={styles.experiencia}
-              key={experiencia.titulo}
-            >
-              <div className={styles.icono}>
-                {experiencia.icono}
-              </div>
+              <p>
+                Sus calles, templos, construcciones tradicionales y espacios
+                naturales convierten cada visita en una experiencia llena de
+                identidad, tranquilidad y aventura.
+              </p>
 
-              <h3>{experiencia.titulo}</h3>
-              <p>{experiencia.texto}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+              <div className={styles.presentationStats}>
+                <div>
+                  <strong>12+</strong>
+                  <span>Lugares destacados</span>
+                </div>
 
-      <section id="lugares" className={styles.seccionLugares}>
-        <div className={styles.encabezado}>
-          <span>Lugares reales de la provincia</span>
-          <h2>Lugares turísticos destacados</h2>
-          <p>
-            Conoce atractivos urbanos, culturales y naturales de Celendín.
-          </p>
-        </div>
+                <div>
+                  <strong>4</strong>
+                  <span>Experiencias principales</span>
+                </div>
 
-        <div className={styles.grid}>
-          {lugares.map((lugar) => (
-            <article className={styles.tarjeta} key={lugar.nombre}>
-              <div className={styles.imagenContenedor}>
-                <img
-                  src={lugar.imagen}
-                  alt={lugar.nombre}
-                  loading="lazy"
-                  className={styles.imagen}
-                />
-
-                <span className={styles.tipo}>
-                  {lugar.tipo}
-                </span>
-              </div>
-
-              <div className={styles.contenido}>
-                <span className={styles.zona}>
-                  {lugar.zona}
-                </span>
-
-                <h3>{lugar.nombre}</h3>
-
-                <p>{lugar.descripcion}</p>
-
-                <div className={styles.informacion}>
-                  <span>📍 {lugar.distancia}</span>
+                <div>
+                  <strong>100%</strong>
+                  <span>Cultura celendina</span>
                 </div>
               </div>
-            </article>
-          ))}
+            </div>
+
+            <div className={styles.presentationImage}>
+              <Image
+                src="/images/turismo/panorama-celendin.jpg"
+                alt="Paisaje panorámico de Celendín"
+                fill
+                sizes="(max-width: 900px) 100vw, 46vw"
+                className={styles.coverImage}
+              />
+
+              <div className={styles.imageBadge}>
+                <span>📍</span>
+                <div>
+                  <small>Destino</small>
+                  <strong>Celendín, Cajamarca</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.experienceGrid}>
+            {experiencias.map((experiencia) => (
+              <article
+                className={styles.experienceCard}
+                key={experiencia.titulo}
+              >
+                <div className={styles.experienceIcon}>
+                  {experiencia.icono}
+                </div>
+
+                <div>
+                  <h3>{experiencia.titulo}</h3>
+                  <p>{experiencia.texto}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className={styles.recomendacion}>
-        <div>
-          <span>Prepara tu recorrido</span>
-          <h2>Vive una experiencia inolvidable en Celendín</h2>
-          <p>
-            Lleva ropa cómoda, abrigo, agua, protector solar y respeta los
-            espacios naturales y culturales durante tu visita.
-          </p>
-        </div>
+      <section id="lugares" className={styles.placesSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <div>
+              <span className={styles.eyebrow}>
+                Lugares reales de la provincia
+              </span>
 
-        <a href="/galeria" className={styles.botonClaro}>
-          Ver galería
-        </a>
+              <h2>Lugares turísticos destacados</h2>
+            </div>
+
+            <p>
+              Conoce atractivos urbanos, culturales y naturales de Celendín.
+              Cada lugar conserva una parte de la historia y belleza de la
+              provincia.
+            </p>
+          </div>
+
+          <div className={styles.placesGrid}>
+            {lugares.map((lugar, index) => (
+              <article className={styles.placeCard} key={lugar.nombre}>
+                <div className={styles.cardImage}>
+                  <Image
+                    src={lugar.imagen}
+                    alt={lugar.nombre}
+                    fill
+                    sizes="(max-width: 700px) 100vw, (max-width: 1050px) 50vw, 33vw"
+                    className={styles.coverImage}
+                  />
+
+                  <span className={styles.cardNumber}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <span className={styles.cardType}>{lugar.tipo}</span>
+                </div>
+
+                <div className={styles.cardContent}>
+                  <span className={styles.cardZone}>📍 {lugar.zona}</span>
+
+                  <h3>{lugar.nombre}</h3>
+
+                  <p>{lugar.descripcion}</p>
+
+                  <div className={styles.cardFooter}>
+                    <span>🚗 {lugar.distancia}</span>
+                    <span className={styles.cardArrow}>↗</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.tipsSection}>
+        <div className={styles.container}>
+          <div className={styles.tipsGrid}>
+            <div className={styles.tipsImage}>
+              <Image
+                src="/images/turismo/cerro-jelij.jpg"
+                alt="Montañas y naturaleza de Celendín"
+                fill
+                sizes="(max-width: 900px) 100vw, 50vw"
+                className={styles.coverImage}
+              />
+            </div>
+
+            <div className={styles.tipsContent}>
+              <span className={styles.eyebrow}>Prepara tu recorrido</span>
+
+              <h2>Disfruta Celendín de forma segura</h2>
+
+              <p>
+                Antes de salir, prepara lo necesario para recorrer la ciudad,
+                sus comunidades y sus espacios naturales.
+              </p>
+
+              <div className={styles.tipsList}>
+                <div>
+                  <span>01</span>
+                  <p>Lleva ropa cómoda y abrigo para los cambios de clima.</p>
+                </div>
+
+                <div>
+                  <span>02</span>
+                  <p>Usa protector solar, gorra y lleva suficiente agua.</p>
+                </div>
+
+                <div>
+                  <span>03</span>
+                  <p>Respeta los espacios naturales, culturales y religiosos.</p>
+                </div>
+
+                <div>
+                  <span>04</span>
+                  <p>Consulta las rutas y condiciones antes de cada recorrido.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.cta}>
+        <Image
+          src="/images/turismo/cascada-la-novia.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className={styles.ctaImage}
+        />
+
+        <div className={styles.ctaOverlay} />
+
+        <div className={styles.ctaContent}>
+          <span>Vive una experiencia inolvidable</span>
+
+          <h2>Celendín te espera</h2>
+
+          <p>
+            Descubre sus paisajes, comparte con su gente y conoce las
+            tradiciones que hacen especial a esta provincia.
+          </p>
+
+          <div className={styles.heroButtons}>
+            <Link href="/galeria" className={styles.primaryButton}>
+              Ver galería
+            </Link>
+
+            <Link href="/contactanos" className={styles.secondaryButton}>
+              Contáctanos
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );
